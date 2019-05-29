@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>焕梅魔方</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			
+			.bigdiv{
+				width: 400px;
+				height: 400px;
+				margin: 300px auto;
+				transform-style: preserve-3d;
+				position: relative;
+				animation: donghua 2.5s infinite cubic-bezier(.45,.05,.55,.95);
+			}
+			@keyframes donghua{
+				from{
+					transform: rotate3d(1,1,0,0deg);
+				}
+				to{
+					transform: rotate3d(1,1,0,360deg);
+				}
+			}
+			.min{
+				width: 400px;
+				height: 400px;
+				/*margin: 200px auto;*/
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				opacity: 0.7;
+				transition: all 1s;
+				background-position: center;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+				background-image: url(img/meizi.jpg);
+			}
+			#xiao{
+				width: 200px;
+				height: 200px;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+			}
+			.front{
+				
+				transform: translateZ(200px);
+			}
+			.bigdiv:hover .front{
+				transform: translateZ(300px);
+			}
+			
+			.back{
+				
+				transform: translateZ(-200PX);
+			}
+			.bigdiv:hover .back{
+				transform: translateZ(-300PX);
+			}
+			
+			.left{
+				
+				transform: rotateY(-90deg) translateZ(200px);
+			}
+			.bigdiv:hover .left{
+				transform: rotateY(-90deg) translateZ(300px);
+			}
+			
+			.right{
+				
+				transform: rotateY(90deg) translateZ(200px);
+				
+			}
+			.bigdiv:hover .right{
+				transform: rotateY(90deg) translateZ(300px);
+			}
+			
+			.top{
+				
+				transform: rotateX(90deg) translateZ(200px);
+			
+			}
+			.bigdiv:hover .top{
+				transform: rotateX(90deg) translateZ(300px);
+			}
+			
+			.bottom{
+			
+				
+				transform: rotateX(-90deg) translateZ(200px);
+				
+			}
+			.bigdiv:hover .bottom{
+				transform: rotateX(-90deg) translateZ(300px);
+			}
+			
+			
+			
+			.frontt{
+				
+				transform: translateZ(100px);
+			}
+		
+			
+			.backk{
+				
+				transform: translateZ(-100PX);
+			}
+			
+			
+			.leftt{
+				
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			
+			.rightt{
+				
+				transform: rotateY(90deg) translateZ(100px);
+				
+			}
+			
+			
+			.topp{
+				
+				transform: rotateX(90deg) translateZ(100px);
+			
+			}
+			
+			.bottomm{
+				
+				
+				transform: rotateX(-90deg) translateZ(100px);
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="bigdiv">
+			<div class="min top"></div>
+			<div class="min bottom"></div>
+			<div class="min left"></div>
+			<div class="min right"></div>
+			<div class="min back"></div>
+			<div class="min front"></div>
+			<div class="min topp" id="xiao"></div>
+			<div class="min bottomm" id="xiao"></div>
+			<div class="min leftt" id="xiao"></div>
+			<div class="min rightt" id="xiao"></div>
+			<div class="min backk" id="xiao"></div>
+			<div class="min frontt" id="xiao"></div>
+		</div>
+		
+	</body>
+</html>
